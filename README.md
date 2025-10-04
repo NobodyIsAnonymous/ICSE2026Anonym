@@ -83,6 +83,12 @@ GenDetect provides functionality to:
    # Edit .env file with your API keys
    nano .env  # or use your preferred editor
    ```
+   
+   **Required API Keys:**
+   - `OPENAI_API_KEY`: For GPT-based analysis
+   - `ETHERSCAN_API_KEY`: For blockchain data access
+   
+   **⚠️ Performance Note:** The tool uses Infura API for trace retrieval. Analysis speed depends on API response time. For better performance, consider using a local full node.
 
 5. **Verify installation**
    ```bash
@@ -178,9 +184,38 @@ python src/tx_replayer.py add-rule 0x1106418384414ed56cd7cbb9fedc66a02d39b663d58
 └── README.md                  # This file
 ```
 
-## Notes
+## Important Notes & Limitations
 
+### Performance Considerations
+- **API Performance**: This tool uses Infura API for blockchain trace retrieval. Analysis speed heavily depends on API response time
+- **Performance Optimization**: Using a local full node instead of Infura will significantly improve performance
+- **Rate Limits**: Be mindful of API rate limits when processing large batches of transactions
+
+### Data Availability  
+- **Classification Dataset**: The labeled dataset used for attack pattern classification contains proprietary data from partner companies and cannot be included in this open-source release
+- **Future Availability**: A processed/anonymized version of the classification dataset may be released after appropriate encryption and privacy protection measures
+
+### Usage Guidelines
 - Transaction hashes should be complete (with 0x prefix)
-- Rule names should be descriptive and follow naming conventions
+- Rule names should be descriptive and follow naming conventions  
 - Results are saved as CSV files in the specified output directory
+- Please respect API usage limits and avoid excessive requests
+
+## Acknowledgments
+
+### Data Sources
+- **Attack Patterns**: Our attack rule database is built upon the comprehensive DeFi attack dataset from [DeFiHackLabs](https://github.com/SunWeb3Sec/DeFiHackLabs)
+- **Transaction Data**: Blockchain transaction traces are retrieved via Infura API infrastructure
+
+### Special Thanks
+- **DeFiHackLabs Team**: For providing an excellent open-source collection of DeFi attack vectors and PoCs that serve as the foundation for our attack pattern analysis
+- **Foundry Team**: For the robust smart contract testing framework used throughout this project
+
+## License & Citation
+
+This project is part of the research submitted to ICSE 2026. If you use this tool or dataset in your research, please cite our paper accordingly.
+
+---
+
+**⚠️ Disclaimer**: This tool is for research and educational purposes only. The authors are not responsible for any misuse of the provided attack detection capabilities.
 
