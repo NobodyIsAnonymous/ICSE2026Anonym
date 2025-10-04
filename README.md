@@ -192,7 +192,7 @@ python src/tx_replayer.py add-rule 0x1106418384414ed56cd7cbb9fedc66a02d39b663d58
 - **Rate Limits**: Be mindful of API rate limits when processing large batches of transactions
 
 ### Data Availability  
-- **Classification Dataset**: The labeled dataset used for attack pattern classification contains proprietary data from partner companies and cannot be included in this open-source release
+- **Classification Dataset**: The labeled dataset used for address classification contains proprietary data from partner companies and cannot be included in this open-source release
 - **Future Availability**: A processed/anonymized version of the classification dataset may be released after appropriate encryption and privacy protection measures
 
 ### Usage Guidelines
