@@ -1,0 +1,32 @@
+# GenDetect Python Dependencies
+# Core Data Science Libraries
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+scipy>=1.10.0
+matplotlib>=3.6.0
+joblib>=1.2.0
+xgboost>=1.7.0
+
+# Machine Learning & NLP
+sentence-transformers>=2.2.0
+tslearn>=0.5.0
+python-Levenshtein>=0.20.0
+
+# API & Web
+openai>=1.0.0
+requests>=2.28.0
+pydantic>=1.10.0
+
+# ElasticSearch & OpenSearch
+opensearch-py>=2.0.0
+opensearch-dsl>=2.0.0
+
+# Blockchain & DeFi Analysis
+dune-client>=1.0.0
+
+# Progress & Utilities
+tqdm>=4.64.0
+
+# Optional: Environment management
+python-dotenv>=0.19.0
