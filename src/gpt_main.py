@@ -5,10 +5,18 @@ import json
 import sys
 import os
 
-OpenAIAPIKey = '***REMOVED***'
-# export OPENAI_API_KEY="sk-..." as environment variable through terminal
-os.environ['OPENAI_API_KEY'] = OpenAIAPIKey
-EtherscanAPIKey = "XT28VFFFF8CFYISGIZ57V6Y1IR85UW8VUX"
+# Load API keys from environment variables for security
+# Set these environment variables before running:
+# export OPENAI_API_KEY="your_openai_api_key_here"
+# export ETHERSCAN_API_KEY="your_etherscan_api_key_here"
+
+OpenAIAPIKey = os.getenv('OPENAI_API_KEY')
+EtherscanAPIKey = os.getenv('ETHERSCAN_API_KEY')
+
+if not OpenAIAPIKey:
+    raise ValueError("OPENAI_API_KEY environment variable is not set")
+if not EtherscanAPIKey:
+    raise ValueError("ETHERSCAN_API_KEY environment variable is not set")
 
 class EtherscanResponse(BaseModel):
     status: str
