@@ -1,0 +1,14 @@
+dependencies:
+  - python=3.11
+  - conda==23.5.2
+  - setuptools
+  - pip
+  - wheel
+  - conda-content-trust
+  - conda-libmamba-solver
+  - ipykernel
+  - pandas
+  - pyzmq[version='<25']
+  - jupyter_client[version='<8']
+  - notebook
+prefix: /home/lanfear/opt/miniconda3
